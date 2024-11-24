@@ -59,7 +59,7 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/newbuild.loader.js";
       var config = {
-        dataUrl: "https://media.githubusercontent.com/media/mennatullahhendawy/Ai-chat/main/Build/newbuild.data",
+        dataUrl: buildUrl + "/newbuild.data",
         frameworkUrl: buildUrl + "/newbuild.framework.js",
         codeUrl: buildUrl + "/newbuild.wasm",
         streamingAssetsUrl: "StreamingAssets",
@@ -106,7 +106,7 @@
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
-                window.unityInstance = unityInstance;
+			    window.unityInstance = unityInstance;
                 loadingBar.style.display = "none";
                 fullscreenButton.onclick = () => {
                   unityInstance.SetFullscreen(1);
@@ -119,26 +119,30 @@
       document.body.appendChild(script);
 
     </script>
-    </script>
+	</script>
 
-    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     
-    <script>
-      var firebaseConfig = {
-        apiKey: "AIzaSyDll3VnSSSpfuD1PmzgfzDZqtrkgCsdFD4",
-        authDomain: "chataihelper-5b8e2.firebaseapp.com",
-        databaseURL: "https://chataihelper-5b8e2-default-rtdb.europe-west1.firebasedatabase.app",
-        projectId: "chataihelper-5b8e2",
-        storageBucket: "chataihelper-5b8e2.appspot.com",
-        messagingSenderId: "886544718486",
-        appId: "1:886544718486:web:8c77ed4af5fdc3821440b7",
-        measurementId: "G-FNMBPLNCC3"
-      };
-      firebase.initializeApp(firebaseConfig);
-    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+   
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    
+     <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDHcOm5feOJTxWKCfqX2LqoY2LMxKUi9V8",
+            authDomain: "archigen-32e08.firebaseapp.com",
+            databaseURL: "https://archigen-32e08-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "archigen-32e08",
+            storageBucket: "archigen-32e08.appspot.com",
+            messagingSenderId: "159750102700",
+            appId: "1:159750102700:web:f95613768f98c614dbc909",
+            measurementId: "G-D9598RXLJW"
+        };
+    
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+        </script>
   </body>
 </html>
