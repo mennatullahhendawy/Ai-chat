@@ -57,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/newbuild2.loader.js";
+      var loaderUrl = buildUrl + "/newbuild.loader.js";
       var config = {
-        dataUrl: buildUrl + "/newbuild2.data",
-        frameworkUrl: buildUrl + "/newbuild2.framework.js",
-        codeUrl: buildUrl + "/newbuild2.wasm",
+        dataUrl: buildUrl + "/newbuild.data",
+        frameworkUrl: buildUrl + "/newbuild.framework.js",
+        codeUrl: buildUrl + "/newbuild.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "ChatAiHelper",
         productName: "ChatAiHelper",
@@ -109,7 +109,7 @@
                 window.unityInstance = unityInstance;
                 loadingBar.style.display = "none";
                 fullscreenButton.onclick = () => {
-                  document.makeFullscreen('unity-container');
+                  unityInstance.SetFullscreen(1);
                 };
               }).catch((message) => {
                 alert(message);
@@ -119,26 +119,26 @@
       document.body.appendChild(script);
 
     </script>
-     </script>
+    </script>
 
-     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
-     
-     <script>
-       var firebaseConfig = {
-         apiKey: "AIzaSyDll3VnSSSpfuD1PmzgfzDZqtrkgCsdFD4",
-         authDomain: "chataihelper-5b8e2.firebaseapp.com",
-         databaseURL: "https://chataihelper-5b8e2-default-rtdb.europe-west1.firebasedatabase.app",
-         projectId: "chataihelper-5b8e2",
-         storageBucket: "chataihelper-5b8e2.appspot.com",
-         messagingSenderId: "886544718486",
-         appId: "1:886544718486:web:8c77ed4af5fdc3821440b7",
-         measurementId: "G-FNMBPLNCC3"
-       };
-       firebase.initializeApp(firebaseConfig);
-     </script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
+    
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDll3VnSSSpfuD1PmzgfzDZqtrkgCsdFD4",
+        authDomain: "chataihelper-5b8e2.firebaseapp.com",
+        databaseURL: "https://chataihelper-5b8e2-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "chataihelper-5b8e2",
+        storageBucket: "chataihelper-5b8e2.appspot.com",
+        messagingSenderId: "886544718486",
+        appId: "1:886544718486:web:8c77ed4af5fdc3821440b7",
+        measurementId: "G-FNMBPLNCC3"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>
